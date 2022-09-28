@@ -65,7 +65,7 @@ export default function Index() {
         <div className="mx-auto mt-16 max-w-7xl text-center">
           <Link
             to="/posts"
-            className="text-xl text-blue-600 underline"
+            className="text-xl text-blue-600 hover:underline"
           >
             Blog Posts
           </Link>

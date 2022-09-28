@@ -13,7 +13,7 @@ export const loader: LoaderFunction = async () => {
 };
 
 export default function PostAdmin() {
-  const { posts } = useLoaderData() as LoaderData;
+  const { posts } = useLoaderData() as unknown as LoaderData;
   return (
     <div className="mx-auto max-w-4xl">
       <h1 className="my-6 mb-2 border-b-2 text-center text-3xl">
@@ -26,7 +26,7 @@ export default function PostAdmin() {
               <li key={post.slug}>
                 <Link
                   to={post.slug}
-                  className="text-blue-600 underline"
+                  className="text-blue-600 hover:underline"
                 >
                   {post.title}
                 </Link>

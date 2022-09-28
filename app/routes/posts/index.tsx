@@ -16,25 +16,32 @@ export const loader = async () => {
 
 
 export default function Posts() {
-    const { posts } = useLoaderData() as LoaderData;
+    const { posts } = useLoaderData()as unknown as LoaderData;
     return (
+      <div className="mx-auto max-w-4xl">
+      <h1 className="my-6 mb-2 border-b-2 text-center text-3xl">
+        Blog Admin
+      </h1>
       <main>
         <h1>Posts</h1>
-      <Link to="admin" className="text-red-600 underline">
-        Admin
-      </Link>
+      
         <ul>
         {posts.map((post) => (
           <li key={post.slug}>
             <Link
               to={post.slug}
-              className="text-blue-600 underline"
+              className="text-blue-600 hover:underline"
             >
               {post.title}
             </Link>
           </li>
         ))}
       </ul>
+      <br /><br/>
+      <Link to="admin" className="text-red-600 hover:underline">
+        Admin
+      </Link>
       </main>
+      </div>
     );
   }
