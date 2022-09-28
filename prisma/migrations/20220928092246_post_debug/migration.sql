@@ -1,0 +1,12 @@
+-- CreateTable
+CREATE TABLE "Post" (
+    "id" INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+    "slug" TEXT NOT NULL,
+    "title" TEXT NOT NULL,
+    "markdown" TEXT NOT NULL,
+    "createdAt" DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    "updatedAt" DATETIME NOT NULL,
+    "published" BOOLEAN NOT NULL DEFAULT true,
+    "views" INTEGER NOT NULL DEFAULT 0,
+    "likes" INTEGER NOT NULL DEFAULT 0
+);
